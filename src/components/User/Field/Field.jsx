@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { toastMainOptions } from 'config';
 import { RotatingLines } from 'react-loader-spinner';
 
-import { Input } from 'components/Input';
+import { Input } from 'components/UI/Input';
 
 import sprite from 'images/symbol-defs.svg';
 import scss from './Field.module.scss';

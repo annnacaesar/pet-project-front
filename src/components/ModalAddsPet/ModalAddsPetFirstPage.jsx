@@ -1,7 +1,7 @@
 import { ErrorMessage, Form, Formik } from 'formik';
 import PetsIcon from '@mui/icons-material/Pets';
 import { useTranslation } from 'react-i18next';
-import { InputForm } from 'components/Input';
+import { InputForm } from 'components/UI/Input';
 import scss from './ModalAddsPet.module.scss';
 import { pet } from 'services';
 

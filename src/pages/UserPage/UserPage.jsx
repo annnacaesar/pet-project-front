@@ -1,7 +1,7 @@
 import { useModal } from 'hooks';
 import { useTranslation } from 'react-i18next';
 
-import Container from 'components/Container';
+import Container from 'components/UI/Container';
 import Modal from 'components/Modal';
 import { ModalAddsPet } from 'components/ModalAddsPet';
 import { Logout } from 'components/User/Logout';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Input } from '../../Input';
+import { Input } from '../../UI/Input';
 import css from './NoticesSearch.module.scss';
 import sprite from 'images/symbol-defs.svg';
 import { useTranslation } from 'react-i18next';

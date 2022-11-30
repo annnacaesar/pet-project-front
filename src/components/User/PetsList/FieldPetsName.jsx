@@ -3,7 +3,7 @@ import { useUpdatePetMutation } from 'redux/fetchPets';
 import { toast } from 'react-toastify';
 import { toastMainOptions } from 'config';
 
-import { Input } from 'components/Input';
+import { Input } from 'components/UI/Input';
 
 import sprite from 'images/symbol-defs.svg';
 import scss from './PetsList.module.scss';

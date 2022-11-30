@@ -39,6 +39,29 @@
   }
 }
 
+.input__wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.error {
+  position: absolute;
+  top: 25%;
+  right: 6%;
+  font-family: 'Manrope';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  color: red;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
 .InputNews {
   background: var(--btn__color);
   box-shadow: 7px 4px 14px rgba(49, 21, 4, 0.07);

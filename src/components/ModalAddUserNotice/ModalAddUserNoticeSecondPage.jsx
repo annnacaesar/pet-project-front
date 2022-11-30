@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import { useTranslation } from 'react-i18next';
 import PetsIcon from '@mui/icons-material/Pets';
-import { Input, InputForm } from 'components/Input';
+import { Input, InputForm } from 'components/UI/Input';
 import sprite from '../../images/symbol-defs.svg';
 import scss from './ModalAddUserNotice.module.scss';
 import { notice } from 'services';

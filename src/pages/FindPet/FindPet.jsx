@@ -3,7 +3,7 @@ import NoticesSearch from 'components/Notices/NoticesSearch';
 import NoticesCategoriesNav from 'components/Notices/NoticesCategoriesNav';
 import AddNoticeButton from 'components/Notices/AddNoticeButton';
 import styles from './FindPet.module.scss';
-import Container from 'components/Container';
+import Container from 'components/UI/Container';
 import { Outlet } from 'react-router-dom/dist';
 import { useTranslation } from 'react-i18next';
 

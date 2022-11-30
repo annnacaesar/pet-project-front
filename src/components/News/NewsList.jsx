@@ -23,7 +23,7 @@ export const NewsList = () => {
         <>
             {!data ? (
                 <div className={scss.notNewsFound}>
-                    <h3 className={scss.notNewsFoundText}>Waiting pleas...</h3>
+                    <h3 className={scss.notNewsFoundText}>Waiting please...</h3>
                 </div>
             ) : (
                <ul className={scss.newsList}>

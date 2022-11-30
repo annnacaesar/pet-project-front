@@ -1,6 +1,6 @@
 import scss from './Home.module.scss';
 import heart from '../../images/desctop/heart.png';
-import Container from 'components/Container';
+import Container from 'components/UI/Container';
 import { useTranslation } from 'react-i18next';
 
 function Home() {

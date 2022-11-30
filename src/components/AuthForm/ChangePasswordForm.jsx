@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { Link, useParams } from 'react-router-dom';
 import { useUpdatePasswordMutation } from 'redux/fetchUser';
-import { ErrorMessage, Form, Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import { useTranslation } from 'react-i18next';
-import { InputForm } from 'components/Input';
+import { InputFormik } from 'components/UI/Input';
 import scss from './AuthForm.module.scss';
-import Button from 'components/Button';
+import Button from 'components/UI/Button';
 import { user } from 'services';
+import InputEye from 'components/UI/InputEye';
 
 const initialValues = {
   password: '',
@@ -50,20 +49,32 @@ export const ChangePasswordForm = (props) => {
             {!isSuccess ? (
               <>
                 <h2 className={scss.title}>{props.title}</h2>
-                <div className={scss.input__wrapper}>
-                  <InputForm name="password" type={passwordShow ? 'text' : 'password'} placeholder="Password" />
-                  <span id="visibilityBtn" className={scss.IconPassword} onClick={togglePassword}>
-                    {passwordShow ? <VisibilityIcon /> : <VisibilityOffIcon />}
-                  </span>
-                  <ErrorMessage name="password" component="p" className={scss.error__password} />
-                </div>
-                <div className={scss.input__wrapper_last}>
-                  <InputForm name="confirmPassword" type={passwordConfirm ? 'text' : 'password'} placeholder="Confirm Password" />
-                  <span id="visibilityBtn" className={scss.IconPassword} onClick={togglePasswordConfirm}>
-                    {passwordConfirm ? <VisibilityIcon /> : <VisibilityOffIcon />}
-                  </span>
-                  <ErrorMessage name="confirmPassword" component="p" className={scss.error__password} />
-                </div>
+
+
+                <InputFormik
+							name="password"
+							type={passwordShow ? 'text' : 'password'}
+							placeholder="Password"
+							customStyleError={scss.error__password}
+						>
+							<InputEye
+								onClick={togglePassword}
+								passwordShow={passwordShow}
+							/>
+						</InputFormik>
+
+						<InputFormik
+							name="confirmPassword"
+							type={passwordConfirm ? 'text' : 'password'}
+							placeholder="Confirm Password"
+							customStyleWrapper={scss.input__wrapper_last}
+							customStyleError={scss.error__password}
+						>
+							<InputEye
+								onClick={togglePasswordConfirm}
+								passwordShow={passwordConfirm}
+							/>
+						</InputFormik>
 
                 <div className={scss.button__container}>
                   <Button type="submit" className={scss.button__auth} buttonName={t('Confirm')}></Button>

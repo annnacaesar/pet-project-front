@@ -1,6 +1,6 @@
 import scss from './News.module.scss';
-import { Input } from 'components/Input';
-import Scss from 'components/Input/Input.module.scss'
+import { Input } from 'components/UI/Input';
+import Scss from 'components/UI/Input/Input.module.scss'
 import sprite from 'images/symbol-defs.svg';
 import { useDispatch } from 'react-redux';
 import { setFilterNews } from 'redux/sliceNews';

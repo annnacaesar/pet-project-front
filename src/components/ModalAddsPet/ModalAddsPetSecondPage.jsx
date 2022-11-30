@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ErrorMessage, Form, Formik } from 'formik';
-import { Input, InputForm } from 'components/Input';
+import { Input, InputForm } from 'components/UI/Input';
 import sprite from 'images/symbol-defs.svg';
 import scss from './ModalAddsPet.module.scss';
 import { pet } from 'services';

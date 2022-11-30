@@ -1,4 +1,4 @@
-import Container from 'components/Container';
+import Container from 'components/UI/Container';
 import styleFooter from './FooterContainer.module.scss';
 
 const FooterContainer = ({ children }) => {
