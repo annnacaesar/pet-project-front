@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+.footerSection {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 30px;
+  font-family: Caveat, cursive;
+  // background-color: white;
+  //   padding-top: 10px;
+  backdrop-filter: blur(20px);
+  background: hsla(0, 0%, 100%, 0.1);
+
+  -webkit-box-shadow: -1px -5px 10px -1px rgba(0, 0, 0, 0.91);
+  -moz-box-shadow: -1px -5px 10px -1px rgba(0, 0, 0, 0.91);
+  box-shadow: -1px -5px 10px -1px rgba(0, 0, 0, 0.91);
+  display: flex;
+  align-items: center;
+
+  font-size: small;
+
+  .content {
+    display: flex;
+  }
+}

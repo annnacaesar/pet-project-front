@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Pomeranian.JPG",
+    "title": "Get a new best friend for you",
+    "breed": "Pomeranian",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": true
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Miniature-Pinscher.jpg?itok=PKIDPe_X",
+    "title": "Get a new best friend for you",
+    "breed": "Miniature pincher",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": false
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://www.petbarn.com.au/petspot/app/uploads/2016/08/96-Silky-Terrier.jpg",
+    "title": "Get a new best friend for you",
+    "breed": "Silky terrier",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": false
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://geniusvets.s3.amazonaws.com/gv-dog-breeds/alaskan-malamute-1.jpg",
+    "title": "Get a new best friend for you",
+    "breed": "Alaskan malamute",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": false
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Pomeranian.JPG",
+    "title": "Get a new best friend for you",
+    "breed": "Pomeranian",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": false
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Miniature-Pinscher.jpg?itok=PKIDPe_X",
+    "title": "Get a new best friend for you",
+    "breed": "Miniature pincher",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": false
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://www.petbarn.com.au/petspot/app/uploads/2016/08/96-Silky-Terrier.jpg",
+    "title": "Get a new best friend for you",
+    "breed": "Silky terrier",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": false
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://geniusvets.s3.amazonaws.com/gv-dog-breeds/alaskan-malamute-1.jpg",
+    "title": "Get a new best friend for you",
+    "breed": "Alaskan malamute",
+    "place": "Lviv",
+    "Age": "one year",
+    "category": "sell",
+    "favourite": false,
+    "myads": false
+  }
+]

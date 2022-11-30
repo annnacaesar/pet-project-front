@@ -1,0 +1,255 @@
+.NoticeCategoryItem {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  max-height: 606px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 64px) / 2);
+    margin-right: 32px;
+    max-width: 336px;
+  }
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc((100% - 128px) / 4);
+    margin-right: 32px;
+    max-width: 288px;
+  }
+}
+
+.NoticeCategoryItem__img {
+  display: block;
+  object-fit: cover;
+  width: 280px;
+  height: 288px;
+  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('../../../images/mobile/woman.png');
+  // z-index: -10;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    max-width: initial;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 288px;
+    max-width: initial;
+  }
+}
+
+.NoticeCategoryItem__imgd {
+  display: block;
+  object-fit: cover;
+  width: 280px;
+  height: 288px;
+  background: url('../../../images/mobile/woman.png');
+  filter: blur(5px);
+  transition: filter 500ms;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    max-width: initial;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 288px;
+    max-width: initial;
+  }
+}
+
+.NoticeCategoryItem__category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 268px;
+  margin-bottom: -28px;
+
+  background: rgba(255, 255, 255, 0.6);
+  max-width: 158px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 6px 50px 7px 20px;
+
+  font-family: 'Inter';
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  color: #111111;
+}
+
+.NoticeCategoryItem__heartbutton {
+  position: relative;
+  bottom: 276px;
+  margin-bottom: -44px;
+  left: 224px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    left: 280px;
+  }
+  @media screen and (min-width: 1280px) {
+    left: 232px;
+  }
+}
+
+.NoticeCategoryItem__deletebutton {
+  position: relative;
+  bottom: 56px;
+  margin-bottom: -44px;
+  left: 224px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fdf7f2;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    left: 280px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 232px;
+  }
+}
+
+.NoticeCategoryItem__svg {
+  width: 24px;
+  height: 24px;
+  fill: #f59256;
+}
+
+.NoticeCategoryItem__svgdelete {
+  width: 24px;
+  height: 24px;
+  fill: rgba(17, 17, 17, 0.6);
+
+  &:hover {
+    fill: #f59256;
+  }
+}
+
+.NoticeCategoryItem__infoContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px 16px 32px;
+
+  background-color: var(--card__color);
+
+  border-radius: 0px 0px 20px 20px;
+
+  box-shadow: var(--card__shadowpets);
+}
+
+.NoticeCategoryItem__title {
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: -0.01em;
+
+  color: #111111;
+
+  margin-bottom: 20px;
+}
+
+.NoticeCategoryItem__textContainer {
+  display: flex;
+  margin-bottom: 50px;
+  // height: 100%;
+
+  &.sell {
+    margin-bottom: 20px;
+  }
+}
+
+.NoticeCategoryItem__LearnMoreButton {
+  padding: 8px 28px;
+  background: #ffffff;
+  border: 2px solid #f59256;
+  border-radius: 40px;
+  color: #f59256;
+
+  cursor: pointer;
+
+  &:hover,
+  :focus {
+    background: #f59256;
+    color: #fff;
+  }
+}
+
+.NoticeCategoryItem__LearnMoreButtonText {
+  letter-spacing: 0.04em;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.NoticeCategoryItem__textList {
+  // display: flex;
+  width: 100%;
+}
+
+.NoticeCategoryItem__textKeysContainer {
+  display: flex;
+  width: 35%;
+  justify-content: flex-start;
+}
+.NoticeCategoryItem__textValuesContainer {
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+}
+.NoticeCategoryItem__textItem {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 22px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.blurup {
+  // filter: blur(5px);
+  transition: filter 500ms;
+  animation: example 1500ms linear;
+}
+
+@keyframes example {
+  0% {
+    filter: blur(5px);
+  }
+  25% {
+    filter: blur(4px);
+  }
+  50% {
+    filter: blur(3px);
+  }
+  75% {
+    filter: blur(2px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}

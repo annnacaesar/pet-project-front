@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Ewert&display=swap');
+@import '../Header/container.module.scss';
+
+.bodyBord {
+  background-image: url('https://i.imgur.com/K6g10BB.jpg');
+  background-repeat: repeat;
+  padding: 80px 0 80px 0;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+  z-index: 100;
+
+  overflow-x: scroll;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 1000px) {
+    & {
+      align-items: center;
+    }
+  }
+}
+
+.poster {
+  width: 480px;
+
+  box-sizing: border-box;
+  background-image: url('https://i.imgur.com/Y9Tiq8a.jpg');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 4px 8px 3px #000000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-right: 10px;
+
+  //   white-space: nowrap;
+  animation: bannermove 80s linear infinite;
+  // animation-delay: 1s;
+
+  @media screen and (max-width: 1000px) {
+    & {
+      height: 460px;
+    }
+  }
+  & {
+    transition: 0.5s;
+  }
+
+  &:hover {
+    transform: scale(1.8);
+  }
+}
+
+.mugshot {
+  // width: 300px;
+  // height: 325px;
+  width: 236px;
+  height: 236px;
+  border: 2px solid #291200;
+  padding: 10px;
+  filter: sepia(60%);
+
+  @media screen and (max-width: 1000px) {
+    & {
+      height: 200px;
+    }
+  }
+}
+
+.title {
+  font-family: ewert;
+  color: #291200;
+  font-size: 30pt;
+  font-weight: normal;
+  margin: 0px;
+
+  @media screen and (max-width: 1000px) {
+    & {
+      font-size: 20pt;
+    }
+  }
+}
+
+.sociale {
+  transition: 0.5s;
+  &:hover {
+    transform: translateY(80%) scale(3);
+    color: #291200;
+  }
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(900%);
+  }
+  100% {
+    transform: translateX(-900%);
+  }
+}

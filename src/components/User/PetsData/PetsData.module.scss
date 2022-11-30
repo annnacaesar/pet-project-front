@@ -1,0 +1,57 @@
+.pets__container {
+  list-style: none;
+  max-width: 280px;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    max-width: 740px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 820px;
+  }
+}
+.pets__item {
+  position: relative;
+  margin: 0 auto;
+  background-color: var(--card__color);
+  border-radius: 20px;
+  box-shadow: var(--card__shadow);
+  padding: 16px 20px 40px 20px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    border-radius: 40px;
+    width: 704px;
+    padding: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 821px;
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+}
+.pets__notFound {
+  width: 100%;
+  text-align: center;
+}
+
+.pets__NFtext {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--header__color);
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    line-height: 1.35;
+  }
+}
+
+//////spinner///////
+
+.pets__spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

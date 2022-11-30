@@ -1,0 +1,37 @@
+@import '../container.module.scss';
+
+.hidden {
+  display: none;
+}
+
+.wraperBurgerMenu {
+  position: fixed;
+  background: var(--burger__color);
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  pointer-events: all;
+  z-index: 22;
+  padding: 12px 20px;
+
+  .upperBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+  .centerBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: $breakpoint1280) {
+  .wraperBurgerMenu {
+    display: none;
+  }
+}

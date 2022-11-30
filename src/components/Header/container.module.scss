@@ -1,0 +1,38 @@
+@use 'sass:math';
+$containerWidth: 1280;
+$containerPadding: 32;
+$containerPaddingTablet: 64;
+$containerPaddingMob: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$containerSidePaddingTablet: math.div($containerPaddingTablet, 2);
+$containerSidePaddingMob: math.div($containerPaddingMob, 2);
+$breakpoint1280: 1279.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint1280) {
+    max-width: 1200px;
+    padding: 0 $containerSidePaddingTablet + px;
+  }
+
+  // @media (max-width: $breakpoint992) {
+  //   max-width: 970px;
+  // }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+    padding: 0 $containerSidePaddingMob + px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+    padding: 0 $containerSidePaddingMob + px;
+  }
+}

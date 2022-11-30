@@ -1,0 +1,24 @@
+.logo {
+  font-family: 'Poppins';
+  font-style: normal;
+  letter-spacing: 0.07em;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  // color: #111111;
+  margin-right: 50px;
+  & > span {
+    color: '#F59256';
+  }
+}
+// :nth-of-type(3)
+.logoMenuBurger {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  letter-spacing: 0.07em;
+  color: #111111;
+}

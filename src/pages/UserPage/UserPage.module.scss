@@ -1,0 +1,128 @@
+.user__box {
+  position: relative;
+  padding-top: 61px;
+  margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    padding: 88px 0 0px 0;
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: baseline;
+    padding: 60px 0 0 0;
+  }
+}
+
+.user__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--header__color);
+  margin-bottom: 18px;
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    line-height: 1.35;
+  }
+}
+
+.user__info {
+  max-width: 280px;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--card__color);
+  box-shadow: var(--card__shadow);
+  border-radius: 20px;
+  padding: 20px 12px 20px 16px;
+  margin-bottom: 43px;
+  position: relative;
+  @media screen and (min-width: 768px) {
+    border-radius: 0px 40px 40px 0px;
+    max-width: 736px;
+    padding: 40px 40px 40px 32px;
+    margin-left: -40px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 411px;
+    padding: 20px 16px 20px 16px;
+    margin-right: 32px;
+    margin-left: -20px;
+    margin-bottom: 0;
+  }
+}
+
+.user__pets {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--header__color);
+  margin-bottom: 26px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    line-height: 1.35;
+  }
+}
+
+.addpats {
+  position: absolute;
+  top: 647px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  animation: link 2s ease-in-out infinite;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    top: 87px;
+    right: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 60px;
+    right: 20px;
+  }
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+  @keyframes link {
+    50% {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.addpats__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--header__color);
+  margin-right: 12px;
+}
+
+.addpats__btm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent__color);
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  border-color: transparent;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  opacity: 1;
+}
+.addpats__svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--btn__color);
+}
+.pets__container {
+  width: 100%;
+}

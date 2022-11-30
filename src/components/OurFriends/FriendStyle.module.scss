@@ -1,0 +1,278 @@
+.container{
+width: 100%;
+min-height: 100%;
+background-size: 100%;
+align-items: center;
+padding-left: 20px;
+padding-right: 20px;
+@media screen and (min-width: 768px){
+    padding-left: 32px;
+    padding-right: 32px;
+}
+@media screen and (min-width: 1280px){
+    padding-left: 16px;
+    padding-right: 16px;
+}
+}
+
+
+.title{
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 40px;
+    margin-top: 47px;
+    color:var(--text__color);
+    @media screen and (min-width: 768px) {
+        font-size: 48px;
+         line-height: 66px;
+         margin-top: 92px;
+        margin-bottom: 45px;
+    }
+    @media screen and (min-width: 1280px) {
+        margin-top: 63px;
+        margin-bottom: 60px;
+    }
+}
+
+.friendsList{
+    margin-bottom: 100px;
+    max-width: 280px;
+    margin: auto;
+    margin-bottom: 100px;
+    @media screen and (min-width: 768px) {
+        max-width: 704px;
+        display: flex;
+        flex-wrap: wrap;
+            
+    }
+    @media screen and (min-width: 1280px) {
+        max-width: 1249px;
+        flex-basis: calc((100% - 64px) / 3);
+    }
+}
+
+.friendItem{
+    background: var(--card__color);
+    border-radius: 20px;
+    margin-top: 12px;
+    width: 279px;
+    list-style: none;
+    @media screen and (min-width: 768px) {
+            width: 336px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 394px;
+        
+    }
+}
+
+.friendItem:first-child{
+    margin-top: -12px;
+    @media screen and (min-width: 768px) {
+            margin-top: 0px;
+        }
+}
+.friendItem:nth-last-child(9) {
+    @media screen and (min-width: 768px) {
+            margin-top: 0px;
+        }
+}
+
+.friendItem:nth-child(n + 3) {
+    @media screen and (min-width: 768px) {
+        margin-top: 32px;
+    }
+        @media screen and (min-width: 1280px) {
+            margin-top: 0px;
+        }
+
+}
+
+.friendItem:not(:nth-child(even)) {
+    @media screen and (min-width: 768px) {
+        margin-right: 32px;
+    }
+        @media screen and (min-width: 1280px) {
+            margin-right: 0px;
+        }
+}
+
+.friendItem:nth-child(n + 4) {
+    @media screen and (min-width: 1280px) {
+            margin-top: 32px;
+        }
+    
+}
+
+.friendItem:not(:nth-child(3n)) {
+    @media screen and (min-width: 1280px) {
+            margin-right: 32px;
+        }
+}
+.friendItem:last-child {
+    @media screen and (min-width: 1280px) {
+            margin-right: 0px;
+        }
+}
+
+.itemTitle{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #F59256;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @media screen and (min-width: 768px) {
+        padding-bottom: 16px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    @media screen and (min-width: 1280px) {
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+.ItemNetwork{
+    display: flex;
+    padding-bottom: 12px;
+    @media screen and (min-width: 768px) {
+        padding-bottom: 16px;
+    }
+}
+
+.imgItem{
+    margin-left: 4px;
+    margin-right: 12px;
+    width: 110px;
+    height: 78px;
+    @media screen and (min-width: 768px) {
+        width: 120px;
+            height: 85px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 158px;
+            height: 112px;
+    }
+}
+
+.infoItem{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.infoItemUl{
+    margin-bottom: -4px;
+    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.itemInfoList{
+    margin-bottom: 4px;
+    @media screen and (min-width: 768px) {
+         margin-bottom: 8px;
+    }
+    @media screen and (min-width: 1280px) {
+         margin-bottom: 12px;
+    }
+}
+
+.infoItemWork{
+}
+
+.itemInfoList{}
+
+.text{
+    // width: 150px;
+    // @media screen and (min-width: 768px) {
+    //     width: 181px;
+    // }
+}
+
+.infoItemTime{
+    text-align: start;
+    padding-left: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.infoItemTime:hover{
+color: #F59256;
+}
+
+.popper{
+    text-align: center;
+    width: 120px;
+    height: 160px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+.listWorkDay{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.workDay{
+margin-bottom: 4px;
+display: flex;
+justify-content: space-between;
+}
+
+.infoItemAddress{
+font-family: 'Manrope';
+font-style: normal;
+}
+
+.friendItemEmail{
+    width: 150px;
+}
+
+.friendItemPhone{}
+
+// "Притулок для бездомних тварин 'Сіріус'"
+// "Харківський міський притулок для тварин"
+// "Притулок для собак Велике серце"
+// "Волонтерська організація БАРБОС"
+// "Ветеринарний центр LicoVet"
