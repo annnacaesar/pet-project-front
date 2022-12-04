@@ -1,62 +1,71 @@
-import { ErrorMessage, Form, Formik } from 'formik';
-import PetsIcon from '@mui/icons-material/Pets';
+import { Formik } from 'formik';
 import { useTranslation } from 'react-i18next';
-import { InputForm } from 'components/UI/Input';
-import scss from './ModalAddsPet.module.scss';
+import { InputFormik } from 'components/UI/Input';
+// import scss from './ModalAddsPet.module.scss';
+import scssInput from '../UI/Input/Input.module.scss';
+import scssButton from '../UI/Button/Button.module.scss';
 import { pet } from 'services';
+import ModalContainer from 'components/UI/ModalContainer';
+import TitleModal from 'components/UI/TitleModal';
+import { Button, ButtonClose } from 'components/UI/Button';
+import FormComponent from 'components/UI/FormComponent';
+import { ButtonContainerWrap } from 'components/UI/ButtonContainer';
 
-export const ModalAddsPetFirstPage = (props) => {
-  const { t } = useTranslation();
-  const handleSubmit = (values) => {
-    props.next(values, true);
-  };
-  return (
-    <div className={scss.container}>
-      <button type="button" onClick={props.closeModal} className={scss.btnClose}>
-        <PetsIcon />
-      </button>
-      <h3 className={scss.title}>{t('Add pet')}</h3>
-      <div className={scss.wrapForm}>
-        <Formik validationSchema={pet.stepOneValidationSchema} initialValues={props.data} onSubmit={handleSubmit}>
-          {() => (
-            <Form className={scss.formFirst + ' ' + props.customStyle}>
-              <label htmlFor="namePet" className={scss.label}>
-                {t('Name pet')}
-              </label>
-              <div className={scss.inputWrapper}>
-                <InputForm customStyle={scss.input} name="name" placeholder="Type name pet" />
-                <ErrorMessage name="name" className={scss.error} component="p" />
-              </div>
+export const ModalAddsPetFirstPage = props => {
+	const { t } = useTranslation();
+	const handleSubmit = values => {
+		props.next(values, true);
+	};
+	return (
+		<ModalContainer>
+			<ButtonClose onClick={props.closeModal} />
 
-              <label htmlFor="dateOfBirth" className={scss.label}>
-                {t('Date of birth')}
-              </label>
-              <div className={scss.inputWrapper}>
-                <InputForm customStyle={scss.input} name="dateOfBirth" placeholder="Type date of birth" />
-                <ErrorMessage name="dateOfBirth" className={scss.error} component="p" />
-              </div>
-              <label htmlFor="breed" className={scss.label}>
-                {t('Breed')}
-              </label>
-              <div className={scss.inputWrapperLast}>
-                <InputForm customStyle={scss.input_last} name="breed" placeholder="Type breed" />
-                <ErrorMessage name="breed" className={scss.error} component="p" />
-              </div>
-              <div className={scss.btnWrap}>
-                <button type="submit" className={scss.buttonFill}>
-                  {t('Next')}
-                </button>
-                <button type="button" className={scss.buttonEmpty} onClick={props.closeModal}>
-                  {t('Сancel')}
-                </button>
-              </div>
-            </Form>
-          )}
-        </Formik>
-      </div>
-    </div>
-  );
+			<Formik
+				validationSchema={pet.stepOneValidationSchema}
+				initialValues={props.data}
+				onSubmit={handleSubmit}
+			>
+				{() => (
+					<FormComponent>
+						<TitleModal title={t('Add pet')} />
+
+						<InputFormik
+							customStyle={scssInput.input_with_label}
+							customStyleError={scssInput.input__error_with_label}
+							name="name"
+							placeholder="Type name pet"
+							label={t('Name pet')}
+						/>
+
+						<InputFormik
+							customStyle={scssInput.input_with_label}
+							customStyleError={scssInput.input__error_with_label}
+							name="dateOfBirth"
+							placeholder="Type date of birth"
+							label={t('Date of birth')}
+						/>
+
+						<InputFormik
+							customStyle={scssInput.input_with_label}
+							customStyleError={scssInput.input__error_with_label}
+							customStyleWrapper={scssInput.input__wrapper_last}
+							name="breed"
+							placeholder="Type breed"
+							label={t('Breed')}
+						/>
+
+						<ButtonContainerWrap>
+							<Button type="submit" buttonName={t('Next')} />
+							<Button
+								type="button"
+								onClick={props.closeModal}
+								customStyle={scssButton.button__auth_last}
+								buttonName={t('Сancel')}
+							/>
+						</ButtonContainerWrap>
+					</FormComponent>
+				)}
+			</Formik>
+		</ModalContainer>
+	);
 };
-
-// {/* <Button type="submit" className={scss.buttonFill + ' ' + props.customStyle} buttonName="Next"></Button>
-//  <Button type="button" className={scss.buttonEmpty} buttonName="Cancel"></Button> */}

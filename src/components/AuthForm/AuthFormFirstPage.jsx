@@ -1,12 +1,17 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Form, Formik } from 'formik';
+import { Formik } from 'formik';
+import FormComponent from '../UI/FormComponent';
 import { InputFormik } from 'components/UI/Input/Input';
-import Button from 'components/UI/Button';
+import {Button} from 'components/UI/Button';
 import scss from './AuthForm.module.scss';
+import scssInput from '../UI/Input/Input.module.scss';
 import { user } from 'services';
 import InputEye from 'components/UI/InputEye';
+import {ButtonContainer} from 'components/UI/ButtonContainer';
+import RedirectAuth from 'components/UI/RedirectAuth';
+import TitleModal from 'components/UI/TitleModal';
+import ModalContainer from 'components/UI/ModalContainer';
 
 export const AuthFormFirstPage = props => {
 	const { t } = useTranslation();
@@ -22,14 +27,16 @@ export const AuthFormFirstPage = props => {
 
 	return (
 		<div className={scss.container}>
+			<ModalContainer>
+
 			<Formik
 				validationSchema={user.stepOneValidationSchema}
 				initialValues={props.data}
 				onSubmit={handleSubmit}
 			>
 				{() => (
-					<Form className={scss.form}>
-						<h2 className={scss.title}>{props.title}</h2>
+					<FormComponent>
+						<TitleModal title={props.title} />
 
 						<InputFormik
 							autofocus="autofocus"
@@ -54,7 +61,7 @@ export const AuthFormFirstPage = props => {
 							name="confirmPassword"
 							type={passwordConfirm ? 'text' : 'password'}
 							placeholder="Confirm Password"
-							customStyleWrapper={scss.input__wrapper_last}
+							customStyleWrapper={scssInput.input__wrapper_last}
 							customStyleError={scss.error__password}
 						>
 							<InputEye
@@ -63,26 +70,23 @@ export const AuthFormFirstPage = props => {
 							/>
 						</InputFormik>
 
-						<div className={scss.button__container}>
+						<ButtonContainer>
 							<Button
 								type="submit"
 								className={scss.button__auth}
 								buttonName={t('Next')}
-							></Button>
-						</div>
+							/>
+						</ButtonContainer>
 
-						<p className={scss.redirect__auth}>
-							{t('Already have an account?')}
-							<Link
-								to="/login"
-								className={scss.redirect_link__auth}
-							>
-								{t('Login')}
-							</Link>
-						</p>
-					</Form>
+						<RedirectAuth
+							path="/login"
+							pathName={t('Login')}
+							answer={t('Already have an account?')}
+						/>
+					</FormComponent>
 				)}
 			</Formik>
+			</ModalContainer>
 		</div>
 	);
 };

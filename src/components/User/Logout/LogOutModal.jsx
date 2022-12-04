@@ -2,7 +2,7 @@ import { useLogOutMutation } from 'redux/fetchUser.js';
 import useSound from 'use-sound';
 import { useTranslation } from 'react-i18next';
 
-import Button from 'components/UI/Button';
+import {Button} from 'components/UI/Button';
 
 import CatInShrek from 'images/desctop/CatInShrek.png';
 import scss from './LogOutModal.module.scss';

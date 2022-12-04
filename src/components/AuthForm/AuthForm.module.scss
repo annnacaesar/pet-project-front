@@ -18,21 +18,15 @@
   }
 }
 
-.form {
+.form{
   width: 100%;
-  background-color: inherit;
 }
+
+
 
 @media screen and (min-width: 768px) {
   .container {
     background-image: url('../../images/tablet/loginBg.png');
-  }
-  .form {
-    padding: 60px 80px 40px;
-    width: 610px;
-    background: var(--form__color);
-    box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
-    border-radius: 40px;
   }
 }
 
@@ -40,65 +34,10 @@
   .container {
     background-image: url('../../images/desctop/loginPageBg.png');
   }
-  .form {
-    width: 620px;
-    padding-bottom: 60px;
-  }
 }
-
-.title {
-  margin: 0 0 40px 0;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 49px;
-  text-align: center;
-  letter-spacing: 0.04em;
-
-  color: var(--text__color);
-}
-
-.button__container {
-  margin-bottom: 40px;
-}
-
-.redirect__auth {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: var(--text__color);
-}
-.redirect_link__auth {
-  color: #3091eb;
-}
-
-// .input__wrapper {
-//   position: relative;
-//   margin-bottom: 16px;
-// }
-.input__wrapper_last {
-  margin-bottom: 40px;
-}
-
-
-
-// .error {
-//   position: absolute;
-//   top: 25%;
-//   right: 6%;
-//   font-family: 'Manrope';
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 19px;
-//   letter-spacing: 0.04em;
-//   color: red;
-// }
 
 .error__password {
   right: 12%;
 }
 
-.error__login {
-  margin-bottom: 16px;
-}
+

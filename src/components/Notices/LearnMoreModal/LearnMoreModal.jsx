@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PetsIcon from '@mui/icons-material/Pets';
 import scss from './LearnMoreModal.module.scss';
-import Button from 'components/UI/Button';
+import {Button} from 'components/UI/Button';
 import style from '../../UI/Button/Button.module.scss';
 import { useSelector } from 'react-redux';
 import { useAddToFavoritesMutation, useDeleteFromFavoritesMutation } from '../../../redux/fetchNotice';

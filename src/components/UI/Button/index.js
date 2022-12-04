@@ -1,1 +1,1 @@
-export { default } from './Button.jsx';
+export {Button, ButtonClose, ButtonAddPhoto} from './Button.jsx';

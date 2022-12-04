@@ -1,12 +1,17 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useForgotPasswordMutation } from 'redux/fetchUser';
 import { useTranslation } from 'react-i18next';
-import { Form, Formik } from 'formik';
+import { Formik } from 'formik';
 import { InputFormik } from 'components/UI/Input';
 import scss from './AuthForm.module.scss';
-import Button from 'components/UI/Button';
+import {Button} from 'components/UI/Button';
 import { user } from 'services';
+import FormComponent from 'components/UI/FormComponent';
+import TitleModal from 'components/UI/TitleModal';
+import {ButtonContainer} from 'components/UI/ButtonContainer';
+import ErrorMessageInForm from 'components/UI/ErrorMessageInForm';
+import RedirectAuth from 'components/UI/RedirectAuth';
+import ModalContainer from 'components/UI/ModalContainer';
 
 const initialValues = {
 	email: '',
@@ -35,60 +40,60 @@ export const ForgotPasswordForm = props => {
 
 	return (
 		<div className={scss.container}>
-			<Formik
-				validationSchema={user.emailValidationSchema}
-				initialValues={initialValues}
-				onSubmit={handleSubmit}
-			>
-				{() => (
-					<Form className={scss.form}>
-						{!isSuccess ? (
-							<>
-								<h2 className={scss.title}>{props.title}</h2>
+			<ModalContainer>
+				<Formik
+					validationSchema={user.emailValidationSchema}
+					initialValues={initialValues}
+					onSubmit={handleSubmit}
+				>
+					{() => (
+						<FormComponent>
+							{!isSuccess ? (
+								<>
+									<TitleModal title={props.title} />
 
-								<InputFormik
-									autofocus="autofocus"
-									name="email"
-									type="email"
-									placeholder="Email"
-									autoComplete="off"
-                  customStyleWrapper={scss.input__wrapper_last}
+									<InputFormik
+										autofocus="autofocus"
+										name="email"
+										type="email"
+										placeholder="Email"
+										autoComplete="off"
+										customStyleWrapper={
+											scss.input__wrapper_last
+										}
+									/>
+
+									<ButtonContainer>
+										<Button
+											type="submit"
+											className={scss.button__auth}
+											buttonName={t('Confirm')}
+										/>
+									</ButtonContainer>
+
+									{isError && (
+										<ErrorMessageInForm
+											message={isError.message}
+										/>
+									)}
+								</>
+							) : (
+								<TitleModal
+									title={t(
+										'Your password change notification has been sent.'
+									)}
 								/>
+							)}
 
-								<div className={scss.button__container}>
-									<Button
-										type="submit"
-										className={scss.button__auth}
-										buttonName={t('Confirm')}
-									></Button>
-								</div>
-
-								{isError && (
-									<p className={scss.error__login}>
-										{isError.message}
-									</p>
-								)}
-							</>
-						) : (
-							<h2 className={scss.title}>
-								{t(
-									'Your password change notification has been sent.'
-								)}
-							</h2>
-						)}
-
-						<p className={scss.redirect__auth}>
-							{t('no accaunt?')}
-							<Link
-								to="/register"
-								className={scss.redirect_link__auth}
-							>
-								{t('Register')}
-							</Link>
-						</p>
-					</Form>
-				)}
-			</Formik>
+							<RedirectAuth
+								path="/register"
+								pathName={t('Register')}
+								answer={t('no accaunt?')}
+							/>
+						</FormComponent>
+					)}
+				</Formik>
+			</ModalContainer>
 		</div>
 	);
 };

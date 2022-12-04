@@ -55,3 +55,108 @@
     width: 100%;
   }
 }
+
+.button__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg__color);
+  border: none;
+
+  &:hover,
+  &:focus {
+    transition: box-shadow 250ms ease-out;
+    box-shadow: 0px 0px 1px 2px rgba(245, 146, 86, 0.7);
+    -webkit-box-shadow: 0px 0px 2px 4px rgba(245, 146, 86, 0.7);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(245, 146, 86, 0.7);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .button__close {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.button__wrap{
+  margin: 0;
+}
+
+.error_image {
+  position: absolute;
+  top: 85%;
+  right: 32%;
+  color: red;
+  @media screen and (min-width: 767px) {
+    top: 82%;
+    right: 21%;
+  }
+}
+
+.avatar__img {
+  min-width: 182px;
+  min-height: 182px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.btnAddPhoto {
+  position: relative;
+  width: 208px;
+  height: 208px;
+  background: var(--bg__color);
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 767px) {
+  .btnAddPhoto {
+    width: 182px;
+    height: 182px;
+  }
+}
+
+.crossBig {
+  position: absolute;
+  top: 80px;
+  right: 75px;
+  width: 45px;
+  height: 45px;
+  rotate: 45deg;
+  fill: lightgray;
+}
+
+@media screen and (min-width: 767px) {
+  .crossBig {
+    top: 65px;
+    right: 63px;
+  }
+}
+
+.label {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}

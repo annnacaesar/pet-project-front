@@ -29,24 +29,19 @@
     color: rgba(17, 17, 17, 0.6);
   }
 }
-@media screen and (min-width: 768px) {
-  .input {
-    font-size: 18px;
-  }
-
-  .input::placeholder {
-    font-size: 18px;
-  }
-}
 
 .input__wrapper {
   position: relative;
   margin-bottom: 16px;
 }
 
-.error {
+.input__wrapper_last{
+  margin: 0;
+}
+
+.input__error {
   position: absolute;
-  top: 25%;
+  bottom: 26%;
   right: 6%;
   font-family: 'Manrope';
   font-weight: 400;
@@ -56,11 +51,54 @@
   color: red;
 }
 
+.input__error_with_label{
+  bottom: 15%;
+}
+
 .label {
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
 }
+
+.label__mark {
+  color: var(--accent__color);
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    font-size: 18px;
+  }
+
+  .input::placeholder {
+    font-size: 18px;
+  }
+
+  .input__wrapper {
+    margin-bottom: 28px;
+  }
+  
+  .input__wrapper_last{
+    margin: 0;
+  }
+
+  .label {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+}
+
+.input_with_label{
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 767px) {
+  .input_with_label{
+    margin-top: 12px;
+  }
+}
+
 
 .InputNews {
   background: var(--btn__color);

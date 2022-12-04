@@ -1,0 +1,21 @@
+.container_modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: inherit;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 80px 40px;
+    width: 610px;
+    background: var(--form__color);
+    box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
+    border-radius: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 620px;
+    padding-bottom: 60px;
+  }
+}

@@ -36,11 +36,13 @@ const InputFormik = ({
 	as,
 	label,
 	children,
+	labelMark
 }) => {
 	return (
 		<div className={`${scss.input__wrapper} ${customStyleWrapper}`}>
 			<label htmlFor={name} className={`${scss.label} ${customStyleLabel}`}>
 				{label}
+				<span className={scss.label__mark}>{labelMark}</span>
 			</label>
 			<Field
 				className={`${scss.input} ${customStyle}`}
@@ -55,7 +57,7 @@ const InputFormik = ({
 			<ErrorMessage
 				name={name}
 				component="p"
-				className={`${scss.error} ${customStyleError}`}
+				className={`${scss.input__error} ${customStyleError}`}
 			/>
 		</div>
 	);

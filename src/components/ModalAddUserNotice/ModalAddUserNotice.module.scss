@@ -172,83 +172,95 @@
   color: var(--accent__color);
 }
 
+.wrapTextarea {
+  margin: 20px 0 0 0;
+}
+
+@media screen and (min-width: 767px) {
+  .wrapTextarea {
+    margin: 40px 0 0 0;
+  }
+}
+
 //----------------- First page----------------
 
-.text {
-  width: 240px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  margin-right: auto;
-  margin-left: auto;
-}
+// .text {
+//   width: 240px;
+//   text-align: center;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 22px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
-@media screen and (min-width: 767px) {
-  .text {
-    font-size: 20px;
-    font-weight: 500;
-    width: 442px;
-  }
-}
+// @media screen and (min-width: 767px) {
+//   .text {
+//     font-size: 20px;
+//     font-weight: 500;
+//     width: 442px;
+//   }
+// }
 
-.labelFirst {
-  margin-bottom: 16px;
-}
+// .labelFirst {
+//   margin-bottom: 16px;
+// }
 
-.inputWrapper {
-  position: relative;
-  margin-top: 8px;
-  margin-bottom: 16px;
-}
+// .inputWrapper {
+//   position: relative;
+//   margin-top: 8px;
+//   margin-bottom: 16px;
+// }
 
-@media screen and (min-width: 767px) {
-  .inputWrapper {
-    margin-top: 12px;
-    margin-bottom: 28px;
-  }
-}
+// @media screen and (min-width: 767px) {
+//   .inputWrapper {
+//     margin-top: 12px;
+//     margin-bottom: 28px;
+//   }
+// }
 
-.inputWrapperLast {
-  position: relative;
-  margin-top: 8px;
-}
+// .inputWrapperLast {
+//   position: relative;
+//   margin-top: 8px;
+// }
 
-@media screen and (min-width: 767px) {
-  .inputWrapperLast {
-    margin-top: 12px;
-  }
-}
+// @media screen and (min-width: 767px) {
+//   .inputWrapperLast {
+//     margin-top: 12px;
+//   }
+// }
 
-.input {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 26px;
-  width: 240px;
-  height: 40px;
-  padding: 9px;
-}
+// .input {
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 26px;
+//   width: 240px;
+//   height: 40px;
+//   padding: 9px;
+// }
 
-@media screen and (min-width: 767px) {
-  .input {
-    width: 448px;
-    height: 48px;
-    margin-top: 12px;
-    margin-bottom: 28px;
-    font-size: 18px;
-  }
-}
+// @media screen and (min-width: 767px) {
+//   .input {
+//     width: 448px;
+//     height: 48px;
+//     margin-top: 12px;
+//     margin-bottom: 28px;
+//     font-size: 18px;
+//   }
+// }
 
-.input_last {
-  height: 40px;
-}
+// .input_last {
+//   height: 40px;
+// }
 
-@media screen and (min-width: 767px) {
-  .input_last {
-    width: 448px;
-    height: 48px;
-  }
-}
+// @media screen and (min-width: 767px) {
+//   .input_last {
+//     width: 448px;
+//     height: 48px;
+//   }
+// }
+
+
 
 .error_text_size {
   font-size: 0.55rem;
@@ -439,16 +451,22 @@
 
 .wrapRadio {
   margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapIcon {
-  display: flex;
   margin-top: 18px;
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 .textIcon {
   font-size: 18px;
   line-height: 26px;
+  text-align: center;
 }
 
 @media screen and (min-width: 767px) {
@@ -474,14 +492,14 @@
 .labelGender {
   display: flex;
   flex-direction: column;
-  margin-right: 50px;
+  // margin-right: 50px;
   font-size: 18px;
   line-height: 26px;
 }
 
 @media screen and (min-width: 767px) {
   .labelGender {
-    margin-right: 95px;
+    // margin-right: 95px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -549,19 +567,6 @@
   }
 }
 
-.label {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
-}
-
-@media screen and (min-width: 767px) {
-  .label {
-    font-size: 24px;
-    line-height: 26px;
-  }
-}
-
 .wrapTextarea {
   position: relative;
   margin-top: 28px;
@@ -571,11 +576,29 @@
   resize: none;
 }
 
+.input_with_label{
+  margin-top: 8px;
+}
+
 @media screen and (min-width: 767px) {
   .textarea {
     width: 448px;
     height: 113px;
     margin-top: 12px;
     border-radius: 20px;
+  }
+
+  .input_with_label{
+    margin-top: 12px;
+  }
+}
+
+.wrapTextarea {
+  margin: 20px 0 0 0;
+}
+
+@media screen and (min-width: 767px) {
+  .wrapTextarea {
+    margin: 28px 0 0 0;
   }
 }

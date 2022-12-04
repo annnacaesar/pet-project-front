@@ -1,19 +1,16 @@
+import ModalContainer from 'components/UI/ModalContainer';
+import RedirectAuth from 'components/UI/RedirectAuth';
+import TitleModal from 'components/UI/TitleModal';
 import scss from './AuthForm.module.scss';
 
-export const AuthError = ({error, additionalInfo }) => {
+export const AuthError = ({ error, additionalInfo }) => {
 	return (
 		<div className={scss.container}>
-			<div className={scss.form}>
-				
-			<h2 className={scss.title}>{error}</h2>
+			<ModalContainer>
+				<TitleModal title={error} />
 
-			<p className={scss.redirect__auth}>
-				{additionalInfo}
-				{/* <a className={scss.redirect_link__auth} href="/login">
-					Login
-				</a> */}
-			</p>
-			</div>
+				<RedirectAuth answer={additionalInfo} />
+			</ModalContainer>
 		</div>
 	);
 };
