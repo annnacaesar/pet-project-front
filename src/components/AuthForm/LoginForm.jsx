@@ -85,7 +85,6 @@ export const LoginForm = props => {
 							<ButtonContainer>
 								<Button
 									type="submit"
-									className={scss.button__auth}
 									buttonName={t('Login')}
 									onClick={play}
 								/>

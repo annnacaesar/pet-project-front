@@ -1,5 +1,15 @@
 export const arr = [
   {
+    title: 'WANTED by IT companies',
+    par: 'Dead or Alive',
+    img: 'https://avatars.githubusercontent.com/u/92438869?v=4',
+    alt: '',
+    name: 'Anna Tsisar🕊',
+    desccription: 'Armed & very dangerous',
+    price: '$50.000',
+    git: 'https://github.com/annnacaesar'
+  },
+  {
     title: 'Looking for IT companies',
     par: 'Fullstack Developer',
     img: 'https://avatars.githubusercontent.com/u/92638707?v=4',
@@ -118,16 +128,6 @@ export const arr = [
     desccription: 'Armed & very dangerous',
     price: '$50.000',
     git: ''
-  },
-  {
-    title: 'WANTED by IT companies',
-    par: 'Dead or Alive',
-    img: 'https://avatars.githubusercontent.com/u/92438869?v=4',
-    alt: '',
-    name: 'Anna Tsisar🕊',
-    desccription: 'Armed & very dangerous',
-    price: '$50.000',
-    git: 'https://github.com/annnacaesar'
   },
   {
     title: 'WANTED by IT companies',

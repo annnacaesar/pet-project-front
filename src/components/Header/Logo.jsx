@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const logo = ['p', 'e', 't', 'l', 'y'];
 
@@ -19,6 +20,7 @@ const Logo = ({ styleProp }) => {
 
   return (
     <div className={styleProp}>
+      <Link to='/'>
       {logo.map((letter, i) => {
         if (letter === 't') {
           return (
@@ -33,6 +35,7 @@ const Logo = ({ styleProp }) => {
           </motion.span>
         );
       })}
+      </Link>
     </div>
   );
 };

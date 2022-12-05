@@ -6,8 +6,9 @@
   background-position: right bottom, bottom;
   background-repeat: no-repeat;
   background-size: 20rem, 100vw;
-  padding-top: 50px;
-  height: calc(100vh - 72px);
+  // padding-top: 50px;
+  // height: calc(100vh - 72px);
+  height: 100vh;
   @media screen and (min-width: 768px) {
     align-items: flex-start;
     background-image: url('../../images/tablet/woman.png'), url('../../images/tablet/homeBg.png');
@@ -218,6 +219,11 @@
     scale: 100%;
     opacity: 100%;
   }
+}
+
+.headerWrap{
+  background-color: rgb(253 247 242 / 50%);
+    width: 100%;
 }
 
 //=============================

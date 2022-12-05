@@ -73,7 +73,6 @@ export const AuthFormFirstPage = props => {
 						<ButtonContainer>
 							<Button
 								type="submit"
-								className={scss.button__auth}
 								buttonName={t('Next')}
 							/>
 						</ButtonContainer>

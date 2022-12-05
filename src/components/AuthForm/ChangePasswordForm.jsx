@@ -5,6 +5,7 @@ import { Formik } from 'formik';
 import { useTranslation } from 'react-i18next';
 import { InputFormik } from 'components/UI/Input';
 import scss from './AuthForm.module.scss';
+import scssInput from '../UI/Input/Input.module.scss';
 import {Button} from 'components/UI/Button';
 import { user } from 'services';
 import InputEye from 'components/UI/InputEye';
@@ -85,7 +86,7 @@ export const ChangePasswordForm = props => {
 										}
 										placeholder="Confirm Password"
 										customStyleWrapper={
-											scss.input__wrapper_last
+											scssInput.input__wrapper_last
 										}
 										customStyleError={scss.error__password}
 									>
@@ -98,7 +99,6 @@ export const ChangePasswordForm = props => {
 									<ButtonContainer>
 										<Button
 											type="submit"
-											className={scss.button__auth}
 											buttonName={t('Confirm')}
 										/>
 									</ButtonContainer>

@@ -21,6 +21,7 @@ const News = lazy(() => import('pages/News'));
 const OurFriend = lazy(() => import('pages/OurFriend'));
 const NoticesCategoriesList = lazy(() => import('components/Notices/NoticesCategoriesList'));
 
+
 function App() {
   const { getToken } = selectors;
   const token = useSelector(getToken);
@@ -39,8 +40,8 @@ function App() {
       <ToastContainer />
       <Suspense fallback={<LoaderBear />}>
         <Routes>
-          <Route path="/" element={<SharedLayout />}>
-            <Route index element={<Home />} />
+            <Route path="/" element={<Home />} />
+          <Route  element={<SharedLayout />}>
             <Route path="/news" element={<News />} />
             <Route path="/notices" element={<FindPet />}>
               <Route index element={<NoticesCategoriesList />} />

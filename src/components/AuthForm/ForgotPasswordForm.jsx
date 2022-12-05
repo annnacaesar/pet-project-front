@@ -66,7 +66,6 @@ export const ForgotPasswordForm = props => {
 									<ButtonContainer>
 										<Button
 											type="submit"
-											className={scss.button__auth}
 											buttonName={t('Confirm')}
 										/>
 									</ButtonContainer>

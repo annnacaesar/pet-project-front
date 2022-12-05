@@ -11,6 +11,6 @@ export const AuthError = ({ error, additionalInfo }) => {
 
 				<RedirectAuth answer={additionalInfo} />
 			</ModalContainer>
-		</div>
+		 </div> 
 	);
 };
