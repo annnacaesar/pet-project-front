@@ -1,34 +1,44 @@
 .NoticesCategoriesList {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style: none;
-  // width: 100%;
-  // margin-top: -30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	list-style: none;
+	gap: 32px;
+	width: 100%;
 
-  @media screen and (min-width: 768px) {
-    flex-wrap: wrap;
-    flex-direction: initial;
-    margin-right: -32px;
-  }
+	@media screen and (min-width: 768px) {
+		flex-wrap: wrap;
+		flex-direction: initial;
+	}
 
-  @media screen and (min-width: 1280px) {
-    flex-wrap: wrap;
-    flex-direction: initial;
-    margin-right: -32px;
-    width: 100%;
-  }
+	@media screen and (min-width: 1280px) {
+		flex-wrap: wrap;
+		flex-direction: initial;
+		justify-content: flex-start;
+		gap: 32px;
+		width: 100%;
+	}
 }
 
 .NoticesCategoriesList__Container {
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 50px;
-  margin-top: 60px;
-  // margin-top: 100px;
-  @media screen and (max-width: 767.8px) {
-    margin-top: 30px;
-  }
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 60px 0 120px 0;
+	@media screen and (max-width: 767.8px) {
+		margin: 30px 0 50px 0;
+	}
+}
+
+.noAdvert {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.35;
+	text-align: center;
+	color: var(--text__color);
+	@media screen and (min-width: 768px) {
+		font-size: 28px;
+		line-height: 1.35;
+	}
 }

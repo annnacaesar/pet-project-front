@@ -1,10 +1,15 @@
 .title {
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
   font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--text__color);
+
+  @media screen and (min-width: 768px) {
+  margin: 0 0 40px 0;
   font-size: 36px;
   line-height: 49px;
-  text-align: center;
-  letter-spacing: 0.04em;
-
-  color: var(--text__color);
+  }
 }

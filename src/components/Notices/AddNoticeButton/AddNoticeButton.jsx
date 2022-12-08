@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import styles from './AddNoticeButton.module.scss';
+import scss from './AddNoticeButton.module.scss';
 import { useModal } from 'hooks';
 import Modal from 'components/Modal';
 import { toast } from 'react-toastify';
@@ -35,11 +35,11 @@ const AddNoticeButton = () => {
           {<ModalAddUserNotice onCloseModal={closeModal} />}
         </Modal>
       )}
-      <div className={styles.AddNoticeButton__container}>
-        <span className={styles.AddNoticeButton__span}>{t('Add')}</span>
-        <span className={styles.AddNoticeButton__span}>&nbsp;{t('pet')}</span>
-        <button type="button" className={styles.AddNoticeButton__button} onClick={buttonSwitch}>
-          <svg className={styles.AddNoticeButton__svg}>
+      <div className={scss.AddNoticeButton__container}>
+        <span className={scss.AddNoticeButton__span}>{t('Add')}</span>
+        <span className={scss.AddNoticeButton__span}>&nbsp;{t('pet')}</span>
+        <button type="button" className={scss.AddNoticeButton__button} onClick={buttonSwitch}>
+          <svg className={scss.AddNoticeButton__svg}>
             <use href={sprite + '#icon-plus'} />
           </svg>
         </button>

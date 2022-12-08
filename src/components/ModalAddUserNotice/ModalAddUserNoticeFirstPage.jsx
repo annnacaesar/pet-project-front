@@ -2,22 +2,25 @@ import { Formik, Field } from 'formik';
 import { InputFormik } from 'components/UI/Input';
 import scss from './ModalAddUserNotice.module.scss';
 import scssButton from '../UI/Button/Button.module.scss';
+import scssInput from '../UI/Input/Input.module.scss';
+import scssProgressLine from '../UI/ProgressLine/ProgressLine.module.scss'
+import scssContainer from '../UI/ModalContainer/ModalContainer.module.scss'
 import { useTranslation } from 'react-i18next';
 import { notice } from 'services';
-import scssInput from '../UI/Input/Input.module.scss';
 import ModalContainer from 'components/UI/ModalContainer';
 import { Button, ButtonClose } from 'components/UI/Button';
 import FormComponent from 'components/UI/FormComponent';
 import TitleModal from 'components/UI/TitleModal';
 import { ButtonContainerWrap } from 'components/UI/ButtonContainer';
+import ProgressLine from 'components/UI/ProgressLine';
 
 export const ModalAddUserNoticeFirstPage = props => {
 	const { t } = useTranslation();
 	const handleSubmit = values => {
-		props.next(values, true);
+		props.next(values, false);
 	};
 	return (
-		<ModalContainer>
+		<ModalContainer customStyle={scssContainer.container_modal__add}>
 			<ButtonClose onClick={props.closeModal} />
 
 			<Formik
@@ -29,10 +32,7 @@ export const ModalAddUserNoticeFirstPage = props => {
 					<FormComponent>
 						<TitleModal title={t('Add pet')} />
 
-						<p className={scss.text}>
-							Lorem ipsum dolor sit amet, consectetur Lorem ipsum
-							dolor sit amet, consectetur
-						</p>
+						<ProgressLine stepName={t('First step')} customStyleName={scssProgressLine.stepName__first} customStyleFirst={scssProgressLine.progressLineColor__firstOpas}/>
 
 						<div className={scss.btnContainer}>
 							<Field
@@ -48,7 +48,7 @@ export const ModalAddUserNoticeFirstPage = props => {
 									scss.label_radio_medium + ' ' + scss.activ
 								}
 							>
-								lost/found
+								{t('Lost/Found')}
 							</label>
 
 							<Field
@@ -64,7 +64,7 @@ export const ModalAddUserNoticeFirstPage = props => {
 									scss.label_radio_big + ' ' + scss.activ
 								}
 							>
-								In good hands
+								{t("In good hands")}
 							</label>
 
 							<Field
@@ -80,42 +80,28 @@ export const ModalAddUserNoticeFirstPage = props => {
 									scss.label_radio_small + ' ' + scss.activ
 								}
 							>
-								sell
+								{t("Sell")}
 							</label>
 						</div>
 
 						<InputFormik
 							customStyle={scss.input_with_label}
+							customStyleError={scssInput.input__error_with_label}
 							name="title"
 							type="text"
-							placeholder="Type name"
+							placeholder={t("Type name")}
 							label={t('Tittle of ad')}
 							labelMark="*"
 						/>
 
 						<InputFormik
 							customStyle={scss.input_with_label}
+							customStyleError={scssInput.input__error_with_label}
+							customStyleWrapper={scssInput.input__wrapper_last}
 							name="name"
 							type="text"
-							placeholder="Type name pet"
+							placeholder={t("Type name pet")}
 							label={t('Name pet')}
-						/>
-
-						<InputFormik
-							customStyle={scss.input_with_label}
-							name="dateOfBirth"
-							type="text"
-							placeholder="Type date of birth"
-							label={t('Date of birth')}
-						/>
-
-						<InputFormik
-							customStyle={scss.input_with_label}
-							customStyleWrapper={scssInput.input__wrapper_last}
-							name="breed"
-							type="text"
-							placeholder="Type breed"
-							label={t('Breed')}
 						/>
 
 						<ButtonContainerWrap>

@@ -71,5 +71,22 @@
   "Add": "Add",
   "pet": "pet",
   "Something wrong": "Something wrong",
-  "Try, again later": "Try, again later"
+  "Try, again later": "Try, again later",
+  "Type name pet": "Type name pet",
+  "Type date of birth": "Type date of birth",
+  "Type comments": "Type comments",
+  "First step": "First step",
+  "Type name": "Type name",
+  "Second step": "Second step",
+  "Type breed": "Type breed",
+  "Last step": "Last step",
+  "Type price": "Type price",
+  "Email": "Email",
+  "Password": "Password",
+  "Confirm Password": "Confirm Password",
+  "Name": "Name",
+  "City, region": "City, region",
+  "Mobile phone": "Mobile phone"
+  
+  
 }

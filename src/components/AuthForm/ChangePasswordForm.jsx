@@ -68,7 +68,7 @@ export const ChangePasswordForm = props => {
 										type={
 											passwordShow ? 'text' : 'password'
 										}
-										placeholder="Password"
+										placeholder={t("Password")}
 										customStyleError={scss.error__password}
 									>
 										<InputEye
@@ -84,7 +84,7 @@ export const ChangePasswordForm = props => {
 												? 'text'
 												: 'password'
 										}
-										placeholder="Confirm Password"
+										placeholder={t("Confirm Password")}
 										customStyleWrapper={
 											scssInput.input__wrapper_last
 										}

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import NoticeCategoryItem from 'components/Notices/NoticeCategoryItem';
-import styles from './NoticesCategoriesList.module.scss';
+import scss from './NoticesCategoriesList.module.scss';
 import { useGetNoticeQuery, useGetNoticeFavoritesQuery, useGetUserNoticesQuery } from 'redux/fetchNotice';
 import { useGetCurrentUserQuery } from 'redux/fetchUser';
 import { selectors } from 'redux/selectors';
@@ -40,48 +40,51 @@ const NoticesCategoriesList = () => {
 
   let { refetch } = useGetCurrentUserQuery(isLogged, { skip: !isLogged });
 
-  let { data } = useGetNoticeQuery({ category, search });
+  let { data : petsList } = useGetNoticeQuery({ category, search });
 
-  let { data: favorites } = useGetNoticeFavoritesQuery(isLogged, { skip: !isLogged });
+  let { data: favoritesList } = useGetNoticeFavoritesQuery(isLogged, { skip: !isLogged });
 
-  let { data: userNotices } = useGetUserNoticesQuery(isLogged, { skip: !isLogged });
+  let { data: userNoticesList } = useGetUserNoticesQuery(isLogged, { skip: !isLogged });
 
   useEffect(() => {
-    if (data || favorites || userNotices) {
+    if (petsList || favoritesList || userNoticesList) {
       if (category === 'sell' || category === 'lost-found' || category === 'inGoodHands') {
-        if (!data) {
-          data = null;
-          setPets(data);
+        if (!petsList) {
+          petsList = null;
+          setPets(petsList);
           return;
         }
-        setPets(data.data);
+        const data = [...petsList.data]
+        setPets(data.reverse());
         return;
       } else if (category === 'favorite') {
-        if (!favorites) {
-          favorites = null;
-          setPets(favorites);
+        if (!favoritesList) {
+          favoritesList = null;
+          setPets(favoritesList);
           return;
         }
-        setPets(favorites.favorites);
+        const favorites = [...favoritesList.favorites];
+        setPets(favorites.reverse());
         return;
       } else {
-        if (!userNotices) {
-          userNotices = null;
-          setPets(userNotices);
+        if (!userNoticesList) {
+          userNoticesList = null;
+          setPets(userNoticesList);
           return;
         }
-        setPets(userNotices.notices);
+        const notices = [...userNoticesList.notices]
+        setPets(notices.reverse());
         return;
       }
     } else {
       return;
     }
-  }, [category, data, favorites, userNotices]);
+  }, [category, petsList, favoritesList, userNoticesList]);
 
   return (
-    <div className={styles.NoticesCategoriesList__Container}>
+    <div className={scss.NoticesCategoriesList__Container}>
       {pets && pets.length !== 0 ? (
-        <ul className={styles.NoticesCategoriesList}>
+        <ul className={scss.NoticesCategoriesList}>
           {pets.map(
             ({ _id, name, owner, comments = 'There is no comments', sex, category, petImage, title, breed, location, dateOfBirth, price }) => {
               return (
@@ -107,7 +110,7 @@ const NoticesCategoriesList = () => {
           )}
         </ul>
       ) : (
-        <p>{t('There are no advertisements in this category')}</p>
+        <p className={scss.noAdvert}>{t('There are no advertisements in this category')}</p>
       )}
     </div>
   );

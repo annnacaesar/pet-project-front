@@ -172,15 +172,15 @@
   color: var(--accent__color);
 }
 
-.wrapTextarea {
-  margin: 20px 0 0 0;
-}
+// .wrapTextarea {
+//   margin: 20px 0 0 0;
+// }
 
-@media screen and (min-width: 767px) {
-  .wrapTextarea {
-    margin: 40px 0 0 0;
-  }
-}
+// @media screen and (min-width: 767px) {
+//   .wrapTextarea {
+//     margin: 40px 0 0 0;
+//   }
+// }
 
 //----------------- First page----------------
 
@@ -292,7 +292,7 @@
   @extend .error_text_size;
   position: absolute;
   top: 34%;
-  right: 4%;
+  right: 7%;
   color: red;
 }
 .error_with_label {
@@ -308,7 +308,7 @@
   // border: 1px solid green;
   width: 240px;
   height: 100px;
-  margin: 20px 0 32px 0;
+  margin: 0 0 15px 0;
 }
 
 @media screen and (min-width: 767px) {
@@ -317,7 +317,7 @@
     //    border: 1px solid green;
     width: 384px;
     height: 120px;
-    margin: 20px 0 28px 0;
+    margin: 0 0 28px 0;
   }
 }
 
@@ -347,6 +347,7 @@
   border: 2px solid var(--accent__color);
   border-radius: 40px;
   padding: 7px 25px;
+  color: var(--text__color);
   &:hover,
   &:focus {
     transition: box-shadow 250ms ease-out;
@@ -367,6 +368,7 @@
 }
 
 .label_radio_big {
+  color: var(--text__color);
   position: absolute;
   bottom: 5%;
   left: -2px;
@@ -412,6 +414,7 @@
   border: 2px solid var(--accent__color);
   border-radius: 40px;
   padding: 7px 25px;
+  color: var(--text__color);
   &:hover,
   &:focus {
     transition: box-shadow 250ms ease-out;
@@ -450,13 +453,13 @@
 }
 
 .wrapRadio {
-  margin-bottom: 32px;
+  // margin-bottom: 32px;
   display: flex;
   flex-direction: column;
 }
 
 .wrapIcon {
-  margin-top: 18px;
+  margin-top: 10px;
   width: 100%;
     display: flex;
     justify-content: center;
@@ -467,6 +470,7 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+  color: var(--text__color);
 }
 
 @media screen and (min-width: 767px) {
@@ -478,6 +482,7 @@
 
 .icon {
   margin-bottom: 14px;
+  margin-left: 20%;
   width: 34px;
   height: 34px;
 }
@@ -490,6 +495,7 @@
 }
 
 .labelGender {
+  color: var(--text__color);
   display: flex;
   flex-direction: column;
   // margin-right: 50px;
@@ -568,11 +574,13 @@
 }
 
 .wrapTextarea {
-  position: relative;
-  margin-top: 28px;
+  // position: relative;
+  margin: 0;
+  // margin-top: 28px;
 }
 
 .textarea {
+  margin-top: 12px;
   resize: none;
 }
 
@@ -584,21 +592,11 @@
   .textarea {
     width: 448px;
     height: 113px;
-    margin-top: 12px;
+    
     border-radius: 20px;
   }
 
   .input_with_label{
     margin-top: 12px;
-  }
-}
-
-.wrapTextarea {
-  margin: 20px 0 0 0;
-}
-
-@media screen and (min-width: 767px) {
-  .wrapTextarea {
-    margin: 28px 0 0 0;
   }
 }

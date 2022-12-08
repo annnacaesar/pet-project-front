@@ -4,6 +4,7 @@ import { InputFormik } from 'components/UI/Input';
 // import scss from './ModalAddsPet.module.scss';
 import scssInput from '../UI/Input/Input.module.scss';
 import scssButton from '../UI/Button/Button.module.scss';
+import scssContainer from '../UI/ModalContainer/ModalContainer.module.scss'
 import { pet } from 'services';
 import ModalContainer from 'components/UI/ModalContainer';
 import TitleModal from 'components/UI/TitleModal';
@@ -17,7 +18,7 @@ export const ModalAddsPetFirstPage = props => {
 		props.next(values, true);
 	};
 	return (
-		<ModalContainer>
+		<ModalContainer customStyle={scssContainer.container_modal__add}>
 			<ButtonClose onClick={props.closeModal} />
 
 			<Formik
@@ -33,7 +34,7 @@ export const ModalAddsPetFirstPage = props => {
 							customStyle={scssInput.input_with_label}
 							customStyleError={scssInput.input__error_with_label}
 							name="name"
-							placeholder="Type name pet"
+							placeholder={t('Type name pet')}
 							label={t('Name pet')}
 						/>
 
@@ -41,7 +42,7 @@ export const ModalAddsPetFirstPage = props => {
 							customStyle={scssInput.input_with_label}
 							customStyleError={scssInput.input__error_with_label}
 							name="dateOfBirth"
-							placeholder="Type date of birth"
+							placeholder={t('Type date of birth')}
 							label={t('Date of birth')}
 						/>
 
@@ -50,7 +51,7 @@ export const ModalAddsPetFirstPage = props => {
 							customStyleError={scssInput.input__error_with_label}
 							customStyleWrapper={scssInput.input__wrapper_last}
 							name="breed"
-							placeholder="Type breed"
+							placeholder={t("Type breed")}
 							label={t('Breed')}
 						/>
 

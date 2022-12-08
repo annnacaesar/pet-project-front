@@ -32,7 +32,7 @@
 
 .input__wrapper {
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .input__wrapper_last{
@@ -45,8 +45,8 @@
   right: 6%;
   font-family: 'Manrope';
   font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 12px;
+  line-height: 17px;
   letter-spacing: 0.04em;
   color: red;
 }
@@ -59,6 +59,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
+  color: var(--text__color)
 }
 
 .label__mark {
@@ -90,13 +91,7 @@
 }
 
 .input_with_label{
-  margin-top: 8px;
-}
-
-@media screen and (min-width: 767px) {
-  .input_with_label{
-    margin-top: 12px;
-  }
+  margin-top: 10px;
 }
 
 

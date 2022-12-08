@@ -19,55 +19,77 @@ const FindPet = lazy(() => import('pages/FindPet'));
 const Login = lazy(() => import('pages/Login'));
 const News = lazy(() => import('pages/News'));
 const OurFriend = lazy(() => import('pages/OurFriend'));
-const NoticesCategoriesList = lazy(() => import('components/Notices/NoticesCategoriesList'));
-
+const NoticesCategoriesList = lazy(() =>
+	import('components/Notices/NoticesCategoriesList')
+);
 
 function App() {
-  const { getToken } = selectors;
-  const token = useSelector(getToken);
+	const { getToken } = selectors;
+	const token = useSelector(getToken);
 
-  useEffect(() => {
-    if (localStorage.getItem('app-theme') === 'dark') {
-      return;
-    }
-    localStorage.setItem('app-theme', 'light');
-  }, []);
+	useEffect(() => {
+		if (localStorage.getItem('app-theme') === 'dark') {
+			return;
+		}
+		localStorage.setItem('app-theme', 'light');
+	}, []);
 
-  useGetCurrentUserQuery(token, { skip: !token });
+	useGetCurrentUserQuery(token, { skip: !token });
 
-  return (
-    <>
-      <ToastContainer />
-      <Suspense fallback={<LoaderBear />}>
-        <Routes>
-            <Route path="/" element={<Home />} />
-          <Route  element={<SharedLayout />}>
-            <Route path="/news" element={<News />} />
-            <Route path="/notices" element={<FindPet />}>
-              <Route index element={<NoticesCategoriesList />} />
-              <Route path="lost-found" element={<NoticesCategoriesList />} />
-              <Route path="for-free" element={<NoticesCategoriesList />} />
-              <Route path="sell" element={<NoticesCategoriesList />} />
-              <Route element={<PrivateRoutes />}>
-                <Route path="favorite" element={<NoticesCategoriesList />} />
-                <Route path="own" element={<NoticesCategoriesList />} />
-              </Route>
-            </Route>
-            <Route path="/friends" element={<OurFriend />} />
-            <Route element={<PublicRoutes restricted />}>
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-            </Route>
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/change-password/:id" element={<ChangePassword />} />
-            <Route element={<PrivateRoutes />}>
-              <Route path="/user" element={<UserPage />} />
-            </Route>
-          </Route>
-        </Routes>
-      </Suspense>
-    </>
-  );
+	return (
+		<>
+			<ToastContainer />
+			<Suspense fallback={<LoaderBear />}>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route element={<SharedLayout />}>
+						<Route path="/news" element={<News />} />
+						<Route path="/notices" element={<FindPet />}>
+							<Route index element={<NoticesCategoriesList />} />
+							<Route
+								path="lost-found"
+								element={<NoticesCategoriesList />}
+							/>
+							<Route
+								path="for-free"
+								element={<NoticesCategoriesList />}
+							/>
+							<Route
+								path="sell"
+								element={<NoticesCategoriesList />}
+							/>
+							<Route element={<PrivateRoutes />}>
+								<Route
+									path="favorite"
+									element={<NoticesCategoriesList />}
+								/>
+								<Route
+									path="own"
+									element={<NoticesCategoriesList />}
+								/>
+							</Route>
+						</Route>
+						<Route path="/friends" element={<OurFriend />} />
+						<Route element={<PublicRoutes restricted />}>
+							<Route path="/login" element={<Login />} />
+							<Route path="/register" element={<Register />} />
+						</Route>
+						<Route
+							path="/forgot-password"
+							element={<ForgotPassword />}
+						/>
+						<Route
+							path="/change-password/:id"
+							element={<ChangePassword />}
+						/>
+						<Route element={<PrivateRoutes />}>
+							<Route path="/user" element={<UserPage />} />
+						</Route>
+					</Route>
+				</Routes>
+			</Suspense>
+		</>
+	);
 }
 
 export default App;

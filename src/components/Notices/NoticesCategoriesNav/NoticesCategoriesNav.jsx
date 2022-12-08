@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import styles from './NoticesCategoriesNav.module.scss';
+import scss from './NoticesCategoriesNav.module.scss';
 import { useLocation } from 'react-router-dom/dist';
 import { Trans, withTranslation } from 'react-i18next';
 import { selectors } from 'redux/selectors';
@@ -22,15 +22,15 @@ const NoticesCategoriesNav = () => {
   let location = useLocation();
 
   return (
-    <div className={styles.NoticesCategoriesNav__Container}>
-      <ul className={styles.NoticesCategoriesNav__List}>
+    <div className={scss.NoticesCategoriesNav__Container}>
+      <ul className={scss.NoticesCategoriesNav__List}>
         {link.map((el) => {
           return (
-            <li key={Math.random()} className={styles.NoticesCategoriesNav__Item}>
+            <li key={Math.random()} className={scss.NoticesCategoriesNav__Item}>
               <NavLink
                 to={el.to}
                 className={
-                  location.pathname === el.to ? `${styles.NoticesCategoriesNav__Button} ${styles.active}` : styles.NoticesCategoriesNav__Button
+                  location.pathname === el.to ? `${scss.NoticesCategoriesNav__Button} ${scss.active}` :scss.NoticesCategoriesNav__Button
                 }
               >
                 <Trans i18nKey={`${el.text}`}>
@@ -44,11 +44,11 @@ const NoticesCategoriesNav = () => {
           <>
             {linkAuth.map((el) => {
               return (
-                <li key={Math.random()} className={styles.NoticesCategoriesNav__Item}>
+                <li key={Math.random()} className={scss.NoticesCategoriesNav__Item}>
                   <NavLink
                     to={el.to}
                     className={
-                      location.pathname === el.to ? `${styles.NoticesCategoriesNav__Button} ${styles.active}` : styles.NoticesCategoriesNav__Button
+                      location.pathname === el.to ? `${scss.NoticesCategoriesNav__Button} ${scss.active}` :scss.NoticesCategoriesNav__Button
                     }
                   >
                     <Trans i18nKey={`${el.text}`}>

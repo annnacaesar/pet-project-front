@@ -42,13 +42,13 @@ export const AuthFormFirstPage = props => {
 							autofocus="autofocus"
 							name="email"
 							type="email"
-							placeholder="Email"
+							placeholder={("Email")}
 						/>
 
 						<InputFormik
 							name="password"
 							type={passwordShow ? 'text' : 'password'}
-							placeholder="Password"
+							placeholder={t("Password")}
 							customStyleError={scss.error__password}
 						>
 							<InputEye
@@ -60,7 +60,7 @@ export const AuthFormFirstPage = props => {
 						<InputFormik
 							name="confirmPassword"
 							type={passwordConfirm ? 'text' : 'password'}
-							placeholder="Confirm Password"
+							placeholder={t("Confirm Password")}
 							customStyleWrapper={scssInput.input__wrapper_last}
 							customStyleError={scss.error__password}
 						>

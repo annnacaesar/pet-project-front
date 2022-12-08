@@ -56,7 +56,7 @@ export const ForgotPasswordForm = props => {
 										autofocus="autofocus"
 										name="email"
 										type="email"
-										placeholder="Email"
+										placeholder={t("Email")}
 										autoComplete="off"
 										customStyleWrapper={
 											scss.input__wrapper_last

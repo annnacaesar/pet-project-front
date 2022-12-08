@@ -1,5 +1,6 @@
 import { ModalAddUserNoticeFirstPage } from './ModalAddUserNoticeFirstPage';
 import { ModalAddUserNoticeSecondPage } from './ModalAddUserNoticeSecondPage';
+import { ModalAddUserNoticeThirdPage } from './ModalAddUserNoticeThirdPage';
 import React, { useState } from 'react';
 import { useAddNoticeMutation } from '../../redux/fetchNotice';
 import { getFormData } from 'services/getFormData';
@@ -29,7 +30,7 @@ export const ModalAddUserNotice = props => {
 		setData(prev => ({ ...prev, ...newData }));
 		setPage(prev => prev + 1);
 
-		if (final && page === 1) {
+		if (final && page === 2) {
 			const formData = getFormData(newData)
 			makeRequest(formData);
 			return;
@@ -42,13 +43,19 @@ export const ModalAddUserNotice = props => {
 	};
 
 	const steps = [
-		<ModalAddUserNoticeSecondPage
-			prev={handlePrevStep}
-			closeModal={props.onCloseModal}
-			next={handleNextStep}
-			data={data}
-		/>,
 		<ModalAddUserNoticeFirstPage
+		closeModal={props.onCloseModal}
+		next={handleNextStep}
+		data={data}
+		/>,
+		<ModalAddUserNoticeSecondPage
+		prev={handlePrevStep}
+		closeModal={props.onCloseModal}
+		next={handleNextStep}
+		data={data}
+		/>,
+		<ModalAddUserNoticeThirdPage
+			prev={handlePrevStep}
 			closeModal={props.onCloseModal}
 			next={handleNextStep}
 			data={data}

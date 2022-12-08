@@ -1,0 +1,63 @@
+.progressContainer{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.progressLine{
+	margin-top: 10px;
+	display: flex;
+	width: 100%;
+	height: 10px;
+	border-radius: 10px;
+	border: 2px solid var(--accent__color);
+	// color: violet;
+}
+
+.stepNameWrap{
+	
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	display: flex;
+	text-align: center;
+	color: var(--text__color);
+
+@media screen and (min-width: 768px) {
+		font-size: 24px;
+		line-height: 26px;
+}
+}
+
+.stepName__first{
+	margin-left: 6%;
+}
+
+.stepName__second{
+	margin-left: 33%;
+}
+
+.stepName__third{
+	margin-left: 72%;
+}
+
+.progressLineColor{
+	flex-basis: calc(100% / 3);
+	width: 100px;
+	
+}
+
+.progressLineColor__first{
+	background-color: var(--accent__color);
+}
+.progressLineColor__firstOpas{
+	background-color: rgb(245 146 86 / 50%);
+}
+.progressLineColor__second{
+	background-color: var(--accent__color);
+}
+.progressLineColor__secondOpas{
+	background-color: rgb(245 146 86 / 50%);
+}
+.progressLineColor__third{
+	background-color: rgb(245 146 86 / 50%);
+}

@@ -1,7 +1,7 @@
 import { useModal } from 'hooks';
 import LearnMoreModal from '../LearnMoreModal';
 import { useNavigate } from 'react-router-dom';
-import styles from './NoticeCategoryItem.module.scss';
+import scss from './NoticeCategoryItem.module.scss';
 import sprite from '../../../images/symbol-defs.svg';
 import moment from 'moment';
 import Modal from 'components/Modal';
@@ -94,80 +94,84 @@ const NoticeCategoryItem = ({
 
   return (
     <>
-      <li key={_id} className={styles.NoticeCategoryItem} id={_id}>
+      <li key={_id} className={scss.item} id={_id}>
+        <div className={scss.item__imageWrapper}>
+
+
         <LazyLoadImage
-          className={`${styles.NoticeCategoryItem__img} ${styles.blurup} `}
+          className={`${scss.item__image} ${scss.blurup} `}
           loading="lazy"
           // effect="blur"
           alt="pet"
           src={imageUrl} // use normal <img> attributes as props
         />
-        {/* <img src={imageUrl} alt="pet" className={`${styles.NoticeCategoryItem__img} ${styles.blurup} `} loading="lazy" /> */}
-
-        <p className={styles.NoticeCategoryItem__category}>{normilizeCategory(category)}</p>
+        <p className={scss.item__category}>{normilizeCategory(category)}</p>
         {isFavorite ? (
-          <button className={styles.NoticeCategoryItem__heartbutton} type="button" onClick={handleDeleteFromFavorites}>
-            <svg className={styles.NoticeCategoryItem__svg}>
+          <button className={scss.item__heartbutton} type="button" onClick={handleDeleteFromFavorites}>
+            <svg className={scss.item__svg}>
               <use href={sprite + '#icon-heartFull'} />
             </svg>
           </button>
         ) : (
-          <button className={styles.NoticeCategoryItem__heartbutton} type="button" onClick={handleAddToFavorites}>
-            <svg className={styles.NoticeCategoryItem__svg}>
+          <button className={scss.item__heartbutton} type="button" onClick={handleAddToFavorites}>
+            <svg className={scss.item__svg}>
               <use href={sprite + '#icon-heartEmpty'} />
             </svg>
           </button>
         )}
         {myads && (
-          <button className={styles.NoticeCategoryItem__deletebutton} type="button" onClick={handleDeleteUserNotice}>
-            <svg className={styles.NoticeCategoryItem__svgdelete}>
+          <button className={scss.item__deletebutton} type="button" onClick={handleDeleteUserNotice}>
+            <svg className={scss.item__svgdelete}>
               <use href={sprite + '#icon-remov-pets'} />
             </svg>
           </button>
         )}
-        <div className={styles.NoticeCategoryItem__infoContainer}>
-          <h3 className={styles.NoticeCategoryItem__title}>{title}</h3>
-          <div className={`${styles.NoticeCategoryItem__textContainer} ${styles.sell}`}>
-            <ul className={styles.NoticeCategoryItem__textList}>
-              <li className={styles.NoticeCategoryItem__textItem}>
-                <div className={styles.NoticeCategoryItem__textKeysContainer}>
+        </div>
+        {/* <img src={imageUrl} alt="pet" className={`${scss.item__image} ${scss.blurup} `} loading="lazy" /> */}
+
+        <div className={scss.item__infoContainer}>
+          <h3 className={scss.item__title}>{title}</h3>
+          <div className={`${scss.item__textContainer} ${scss.sell}`}>
+            <ul className={scss.item__textList}>
+              <li className={scss.item__textItem}>
+                <div className={scss.item__textKeysContainer}>
                   <p>{t('Breed')}</p>
                 </div>
-                <div className={styles.NoticeCategoryItem__textValuesContainer}>
-                  <span className={styles.NoticeCategoryItem__textItemspan}>{breed}</span>
+                <div className={scss.item__textValuesContainer}>
+                  <span className={scss.item__textItemspan}>{breed}</span>
                 </div>
               </li>
-              <li className={styles.NoticeCategoryItem__textItem}>
-                <div className={styles.NoticeCategoryItem__textKeysContainer}>
+              <li className={scss.item__textItem}>
+                <div className={scss.item__textKeysContainer}>
                   <p>{t('Place')}</p>
                 </div>
-                <div className={styles.NoticeCategoryItem__textValuesContainer}>
-                  <span className={styles.NoticeCategoryItem__textItemspan}>{place}</span>
+                <div className={scss.item__textValuesContainer}>
+                  <span className={scss.item__textItemspan}>{place}</span>
                 </div>
               </li>
-              <li className={styles.NoticeCategoryItem__textItem}>
-                <div className={styles.NoticeCategoryItem__textKeysContainer}>
+              <li className={scss.item__textItem}>
+                <div className={scss.item__textKeysContainer}>
                   <p>{t('Age')}</p>
                 </div>
-                <div className={styles.NoticeCategoryItem__textValuesContainer}>
-                  <span className={styles.NoticeCategoryItem__textItemspan}>{calculatedogAge(age)}</span>
+                <div className={scss.item__textValuesContainer}>
+                  <span className={scss.item__textItemspan}>{calculatedogAge(age)}</span>
                 </div>
               </li>
               {category === 'sell' && (
-                <li className={styles.NoticeCategoryItem__textItem}>
-                  <div className={styles.NoticeCategoryItem__textKeysContainer}>
+                <li className={scss.item__textItem}>
+                  <div className={scss.item__textKeysContainer}>
                     <p>{t('Price')}</p>
                   </div>
-                  <div className={styles.NoticeCategoryItem__textValuesContainer}>
-                    <span className={styles.NoticeCategoryItem__textItemspan}>{price}$</span>
+                  <div className={scss.item__textValuesContainer}>
+                    <span className={scss.item__textItemspan}>{price}$</span>
                   </div>
                 </li>
               )}
             </ul>
           </div>
 
-          <button type="button" className={styles.NoticeCategoryItem__LearnMoreButton} onClick={toggleModal}>
-            <span className={styles.NoticeCategoryItem__LearnMoreButtonText}>{t('Learn more')}</span>
+          <button type="button" className={scss.item__LearnMoreButton} onClick={toggleModal}>
+            <span className={scss.item__LearnMoreButtonText}>{t('Learn more')}</span>
           </button>
         </div>
       </li>

@@ -11,43 +11,47 @@ import TeamBord from 'components/TeamBord';
 import { useState } from 'react';
 
 function Home() {
-  const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className={scss.home__container}>
-      <div className={scss.headerWrap}>
+	const { t } = useTranslation();
+	const [isOpen, setIsOpen] = useState(false);
+	return (
+		<div className={scss.home__container}>
+			<Header />
 
-      <Header />
-      </div>
+			<Container>
+				<h1 className={scss.home__title}>
+					<span>{t('Take good care of')}</span>
+					<br />
+					<span>{t('your small pets')}</span>
+				</h1>
+				<img src={heart} alt="heart" className={scss.home__heart} />
+			</Container>
+			<Footer>
+				<div className={styleAnimation.footerBicycle}></div>
+				<div className={styleAnimation.wrapp}>
+					<p>
+						&copy;{' '}
+						<span className={styleAnimation.copyright}>
+							2022 From Zero To Hero
+						</span>
+					</p>
+					<div
+						className={styleAnimation.icon}
+						onClick={() => setIsOpen(prev => !prev)}
+					>
+						<PetsIcon
+							sx={{ fontSize: '15px', marginRight: '12px' }}
+						/>
+					</div>
+				</div>
 
-      <Container>
-        <h1 className={scss.home__title}>
-          <span>{t('Take good care of')}</span>
-          <br />
-          <span>{t('your small pets')}</span>
-        </h1>
-        <img src={heart} alt="heart" className={scss.home__heart} />
-      </Container>
-      <Footer>
-      <div className={styleAnimation.footerBicycle}></div>
-      {/* <div className={styleAnimation.footerCar}></div> */}
-      <div className={styleAnimation.wrapp}>
-        <p>
-          &copy; <span className={styleAnimation.copyright}>2022 From Zero To Hero</span>
-        </p>
-        <div className={styleAnimation.icon} onClick={() => setIsOpen((prev) => !prev)}>
-          <PetsIcon sx={{ fontSize: '15px', marginRight: '12px' }} />
-        </div>
-      </div>
-
-      {isOpen && (
-        <Modal>
-          <TeamBord isOpen={setIsOpen} />
-        </Modal>
-      )}
-    </Footer>
-    </div>
-  );
+				{isOpen && (
+					<Modal>
+						<TeamBord isOpen={setIsOpen} />
+					</Modal>
+				)}
+			</Footer>
+		</div>
+	);
 }
 
 export default Home;

@@ -37,9 +37,9 @@ const ButtonClose = ({ customStyle, onClick }) => {
 	);
 };
 
-const ButtonAddPhoto = ({ customStyle,customStyleLabel, image, valid, children, labelBtn }) => {
+const ButtonAddPhoto = ({ customStyle,customStyleLabel, image, valid, children, labelBtn, customWrapperButton }) => {
 	return (
-		<>
+		<div className={scss.wrapperButton + ' ' + customWrapperButton}>
 			<p className={scss.label + ' ' + customStyleLabel}>{labelBtn}</p>
 			<button type="button" className={scss.btnAddPhoto + ' ' + customStyle}>
 				{!image ? (
@@ -58,7 +58,7 @@ const ButtonAddPhoto = ({ customStyle,customStyleLabel, image, valid, children, 
 					{!valid && 'Image is required'}
 				</p>
 			</button>
-		</>
+		</div>
 	);
 };
 

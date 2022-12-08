@@ -1,68 +1,65 @@
-.NoticeCategoryItem {
-  margin-bottom: 32px;
+.item {
   display: flex;
   flex-direction: column;
-  max-width: 280px;
-  max-height: 606px;
 
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 64px) / 2);
-    margin-right: 32px;
-    max-width: 336px;
+    flex-basis: calc((100% - 32px) / 2);
+
   }
   @media screen and (min-width: 1280px) {
-    flex-basis: calc((100% - 128px) / 4);
-    margin-right: 32px;
-    max-width: 288px;
+    flex-basis: calc((100% - 96px) / 4);
   }
 }
 
-.NoticeCategoryItem__img {
+.item__imageWrapper{
+position: relative;
+
+}
+.item__image {
   display: block;
   object-fit: cover;
-  width: 280px;
+  width: 100%;
   height: 288px;
   background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('../../../images/mobile/woman.png');
   // z-index: -10;
 
+ 
+
   @media screen and (min-width: 768px) {
-    width: 336px;
     max-width: initial;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 288px;
     max-width: initial;
   }
 }
 
-.NoticeCategoryItem__imgd {
+.item__imaged {
   display: block;
   object-fit: cover;
-  width: 280px;
-  height: 288px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   background: url('../../../images/mobile/woman.png');
   filter: blur(5px);
   transition: filter 500ms;
 
   @media screen and (min-width: 768px) {
-    width: 336px;
     max-width: initial;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 288px;
     max-width: initial;
   }
 }
 
-.NoticeCategoryItem__category {
+.item__category {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  bottom: 268px;
-  margin-bottom: -28px;
+  position: absolute;
+  top: 20px;
+  left: 0;
 
   background: rgba(255, 255, 255, 0.6);
   max-width: 158px;
@@ -77,11 +74,11 @@
   color: #111111;
 }
 
-.NoticeCategoryItem__heartbutton {
-  position: relative;
+.item__heartbutton {
+  position: absolute;
   bottom: 276px;
-  margin-bottom: -44px;
-  left: 224px;
+  top: 12px;
+  right: 12px;
 
   display: flex;
   justify-content: center;
@@ -94,20 +91,12 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.6);
   border: none;
-
-  @media screen and (min-width: 768px) {
-    left: 280px;
-  }
-  @media screen and (min-width: 1280px) {
-    left: 232px;
-  }
 }
 
-.NoticeCategoryItem__deletebutton {
-  position: relative;
-  bottom: 56px;
-  margin-bottom: -44px;
-  left: 224px;
+.item__deletebutton {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
 
   display: flex;
   justify-content: center;
@@ -120,23 +109,15 @@
   border-radius: 50%;
   background: #fdf7f2;
   border: none;
-
-  @media screen and (min-width: 768px) {
-    left: 280px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    left: 232px;
-  }
 }
 
-.NoticeCategoryItem__svg {
+.item__svg {
   width: 24px;
   height: 24px;
   fill: #f59256;
 }
 
-.NoticeCategoryItem__svgdelete {
+.item__svgdelete {
   width: 24px;
   height: 24px;
   fill: rgba(17, 17, 17, 0.6);
@@ -146,7 +127,7 @@
   }
 }
 
-.NoticeCategoryItem__infoContainer {
+.item__infoContainer {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -159,7 +140,7 @@
   box-shadow: var(--card__shadowpets);
 }
 
-.NoticeCategoryItem__title {
+.item__title {
   flex-grow: 1;
   font-weight: 700;
   font-size: 28px;
@@ -171,7 +152,7 @@
   margin-bottom: 20px;
 }
 
-.NoticeCategoryItem__textContainer {
+.item__textContainer {
   display: flex;
   margin-bottom: 50px;
   // height: 100%;
@@ -181,7 +162,7 @@
   }
 }
 
-.NoticeCategoryItem__LearnMoreButton {
+.item__LearnMoreButton {
   padding: 8px 28px;
   background: #ffffff;
   border: 2px solid #f59256;
@@ -197,28 +178,28 @@
   }
 }
 
-.NoticeCategoryItem__LearnMoreButtonText {
+.item__LearnMoreButtonText {
   letter-spacing: 0.04em;
   font-size: 16px;
   line-height: 22px;
 }
 
-.NoticeCategoryItem__textList {
+.item__textList {
   // display: flex;
   width: 100%;
 }
 
-.NoticeCategoryItem__textKeysContainer {
+.item__textKeysContainer {
   display: flex;
   width: 35%;
   justify-content: flex-start;
 }
-.NoticeCategoryItem__textValuesContainer {
+.item__textValuesContainer {
   width: 65%;
   display: flex;
   justify-content: flex-start;
 }
-.NoticeCategoryItem__textItem {
+.item__textItem {
   display: flex;
   width: 100%;
   justify-content: space-between;

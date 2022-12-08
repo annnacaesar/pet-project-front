@@ -19,3 +19,15 @@
     padding-bottom: 60px;
   }
 }
+.container_modal__add {
+  @media screen and (max-width: 767.8px) {
+    
+    margin: 20px;
+      padding: 30px 20px;
+      // width: 610px;
+      width: 100%;
+      background: var(--form__color);
+      box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
+      border-radius: 40px;
+  }
+}

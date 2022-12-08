@@ -63,14 +63,14 @@ export const LoginForm = props => {
 								autofocus="autofocus"
 								name="email"
 								type="email"
-								placeholder="Email"
+								placeholder={t("Email")}
 								autoComplete="off"
 							/>
 
 							<InputFormik
 								name="password"
 								type={passwordShow ? 'text' : 'password'}
-								placeholder="Password"
+								placeholder={t("Password")}
 								customStyleError={scss.error__password}
 								customStyleWrapper={
 									scssInput.input__wrapper_last

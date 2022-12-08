@@ -36,11 +36,11 @@ export const AuthFormSecondPage = props => {
 								autofocus="autofocus"
 								name="name"
 								type="name"
-								placeholder="Name"
+								placeholder={t("Name")}
 							/>
 
 							<InputFormik
-								placeholder="City, region"
+								placeholder={t("City, region")}
 								name="city"
 								type="city"
 							/>
@@ -48,7 +48,7 @@ export const AuthFormSecondPage = props => {
 							<InputFormik
 								name="phone"
 								type="phone"
-								placeholder="Mobile phone"
+								placeholder={t("Mobile phone")}
 								customStyleWrapper={
 									scssInput.input__wrapper_last
 								}
