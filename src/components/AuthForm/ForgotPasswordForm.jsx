@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Formik } from 'formik';
 import { InputFormik } from 'components/UI/Input';
 import scss from './AuthForm.module.scss';
+import scssInput from '../UI/Input/Input.module.scss';
 import {Button} from 'components/UI/Button';
 import { user } from 'services';
 import FormComponent from 'components/UI/FormComponent';
@@ -59,7 +60,7 @@ export const ForgotPasswordForm = props => {
 										placeholder={t("Email")}
 										autoComplete="off"
 										customStyleWrapper={
-											scss.input__wrapper_last
+											scssInput.input__wrapper_last
 										}
 									/>
 

@@ -1,2 +1,2 @@
-const HOST = 'https://pets-house-server-lg68.onrender.com';
+const HOST = 'https://pet-project-back.onrender.com';
 export default HOST;
